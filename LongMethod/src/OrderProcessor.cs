@@ -33,6 +33,8 @@ public class OrderProcessor
             Warnings = new List<string>()
         };
 
+        // subtotal order items
+        
         decimal subtotal = 0;
 
         foreach (var item in order.Items)
@@ -63,6 +65,7 @@ public class OrderProcessor
         }
 
         // Apply discount
+        
         decimal discount = 0;
         
         // 10% discount on orders over £500
