@@ -15,22 +15,19 @@ public class OrderProcessor
 
         if (order == null)
         {
-            invoice.Warnings.Add("Order is null");
-            return invoice;
+            throw new InvalidOrderException("Order is null");
         }
 
         // check if customer name is missing
         if (string.IsNullOrEmpty(order.CustomerName))
         {
-            invoice.Warnings.Add("Customer name is missing");
-            return invoice;
+            throw new InvalidOrderException("Customer name is missing");
         }
 
         // check if order is empty
         if (order.Items.Count == 0)
         {
-            invoice.Warnings.Add("No items in order");
-            return invoice;
+            throw new InvalidOrderException("No items in order");
         }
 
         decimal subtotal = 0;
@@ -85,6 +82,14 @@ public class OrderProcessor
         invoice.Total = total;
 
         return invoice;
+    }
+}
+
+public class InvalidOrderException : Exception
+{
+    public InvalidOrderException(string message): base(message)
+    {
+
     }
 }
 

@@ -14,32 +14,25 @@
         }
 
         [Test]
-        public void NullOrder_ShouldReturnWarning()
+        public void NullOrder_ShouldThrowException()
         {
-            var invoice = _processor.ProcessOrder(null);
-
-            Assert.Contains("Order is null", invoice.Warnings);
-            Assert.That(invoice.Items.Count, Is.EqualTo(0));
-            Assert.That(invoice.Total, Is.EqualTo(0));
+            Assert.Throws<InvalidOrderException>(() => _processor.ProcessOrder(null));
         }
 
         [Test]
         public void MissingCustomerName_ShouldReturnWarning()
         {
             var order = new Order { CustomerName = null, Items = new List<OrderItem>() };
-            var invoice = _processor.ProcessOrder(order);
 
-            Assert.Contains("Customer name is missing", invoice.Warnings);
+            Assert.Throws<InvalidOrderException>(() => _processor.ProcessOrder(order));
         }
 
         [Test]
         public void EmptyItems_ShouldReturnWarning()
         {
             var order = new Order { CustomerName = "Alice", Items = new List<OrderItem>() };
-            var invoice = _processor.ProcessOrder(order);
 
-            Assert.Contains("No items in order", invoice.Warnings);
-            Assert.That(invoice.Total, Is.EqualTo(0));
+            Assert.Throws<InvalidOrderException>(() => _processor.ProcessOrder(order));
         }
 
         [Test]
