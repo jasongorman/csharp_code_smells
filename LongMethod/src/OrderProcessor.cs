@@ -6,13 +6,9 @@ public class OrderProcessor
 {
     public Invoice ProcessOrder(Order order)
     {
-        var invoice = new Invoice
-        {
-            CustomerName = order?.CustomerName,
-            Items = new List<InvoiceItem>(),
-            Warnings = new List<string>()
-        };
-
+        // check if order is invalid
+        
+        // can't be null
         if (order == null)
         {
             throw new InvalidOrderException("Order is null");
@@ -29,6 +25,13 @@ public class OrderProcessor
         {
             throw new InvalidOrderException("No items in order");
         }
+        
+        var invoice = new Invoice
+        {
+            CustomerName = order?.CustomerName,
+            Items = new List<InvoiceItem>(),
+            Warnings = new List<string>()
+        };
 
         decimal subtotal = 0;
 
