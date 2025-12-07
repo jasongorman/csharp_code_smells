@@ -8,24 +8,8 @@ public class OrderProcessor
     {
         // check if order is invalid
         
-        // can't be null
-        if (order == null)
-        {
-            throw new InvalidOrderException("Order is null");
-        }
+        Validate(order);
 
-        // check if customer name is missing
-        if (string.IsNullOrEmpty(order.CustomerName))
-        {
-            throw new InvalidOrderException("Customer name is missing");
-        }
-
-        // check if order is empty
-        if (order.Items.Count == 0)
-        {
-            throw new InvalidOrderException("No items in order");
-        }
-        
         var invoice = new Invoice
         {
             CustomerName = order?.CustomerName,
@@ -35,6 +19,37 @@ public class OrderProcessor
 
         // subtotal order items
         
+        var subtotal = SubtotalOrder(order, invoice);
+
+        // Apply discount
+        
+        decimal discount = 0;
+        
+        // 10% discount on orders over £500
+        if (subtotal > 500) discount = subtotal * 0.10m;
+        // 5% discount on orders over £200, up to £500
+        else if (subtotal > 200) discount = subtotal * 0.05m;
+
+        invoice.Discount = discount;
+
+        decimal totalAfterDiscount = subtotal - discount;
+
+        // Shipping
+        decimal shipping = 0; // shipping is free on orders >= £200
+        if (totalAfterDiscount < 50) shipping = 10;
+        else if (totalAfterDiscount < 200) shipping = 5;
+
+        decimal total = totalAfterDiscount + shipping;
+
+        invoice.Subtotal = subtotal;
+        invoice.Shipping = shipping;
+        invoice.Total = total;
+
+        return invoice;
+    }
+
+    private decimal SubtotalOrder(Order? order, Invoice invoice)
+    {
         decimal subtotal = 0;
 
         foreach (var item in order.Items)
@@ -64,30 +79,28 @@ public class OrderProcessor
             });
         }
 
-        // Apply discount
-        
-        decimal discount = 0;
-        
-        // 10% discount on orders over £500
-        if (subtotal > 500) discount = subtotal * 0.10m;
-        // 5% discount on orders over £200, up to £500
-        else if (subtotal > 200) discount = subtotal * 0.05m; 
+        return subtotal;
+    }
 
-        decimal totalAfterDiscount = subtotal - discount;
+    private void Validate(Order order)
+    {
+        // can't be null
+        if (order == null)
+        {
+            throw new InvalidOrderException("Order is null");
+        }
 
-        // Shipping
-        decimal shipping = 0; // shipping is free on orders >= £200
-        if (totalAfterDiscount < 50) shipping = 10;
-        else if (totalAfterDiscount < 200) shipping = 5;
+        // check if customer name is missing
+        if (string.IsNullOrEmpty(order.CustomerName))
+        {
+            throw new InvalidOrderException("Customer name is missing");
+        }
 
-        decimal total = totalAfterDiscount + shipping;
-
-        invoice.Subtotal = subtotal;
-        invoice.Discount = discount;
-        invoice.Shipping = shipping;
-        invoice.Total = total;
-
-        return invoice;
+        // check if order is empty
+        if (order.Items.Count == 0)
+        {
+            throw new InvalidOrderException("No items in order");
+        }
     }
 }
 

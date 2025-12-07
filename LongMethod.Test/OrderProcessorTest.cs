@@ -1,4 +1,4 @@
-﻿namespace LongMethod.test
+﻿namespace LongMethod.Test
 {
     namespace OrderProcessorTests
 {
