@@ -7,6 +7,8 @@
     &lt;TestId&gt;NUnit3x::4845E394-77CC-4450-B895-ADF104788994::net6.0::Duplication.Test.InvoiceTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::0E383043-78A1-4269-ACD9-86CE53E2EE20::net6.0::DivergentChange.Test.OrderTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D965DB7E-4633-463E-8EBE-01E82D702880::net6.0::MessageChains.Tests.InvoiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D965DB7E-4633-463E-8EBE-01E82D702880::net6.0::MessageChains.Test.InvoiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::1DD776BC-0CCE-406C-BCC0-702CEA6A912F::net6.0::LongParameterList.Test.OrderServiceTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=852649f7_002D4237_002D482a_002Dadc9_002Ddb63ca10e46a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;

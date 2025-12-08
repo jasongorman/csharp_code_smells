@@ -1,4 +1,4 @@
-namespace MessageChains.Tests
+namespace MessageChains.Test
 {
     [TestFixture]
     public class InvoiceTests {

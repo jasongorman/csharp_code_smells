@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageChains", "MessageCha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageChains.Test", "MessageChains.Test\MessageChains.Test.csproj", "{D965DB7E-4633-463E-8EBE-01E82D702880}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongParameterList", "LongParameterList\LongParameterList.csproj", "{550CBB2F-0F92-4446-867F-62A4EA00F53F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongParameterList.Test", "LongParameterList.Test\LongParameterList.Test.csproj", "{1DD776BC-0CCE-406C-BCC0-702CEA6A912F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,5 +70,13 @@ Global
 		{D965DB7E-4633-463E-8EBE-01E82D702880}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D965DB7E-4633-463E-8EBE-01E82D702880}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D965DB7E-4633-463E-8EBE-01E82D702880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550CBB2F-0F92-4446-867F-62A4EA00F53F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550CBB2F-0F92-4446-867F-62A4EA00F53F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550CBB2F-0F92-4446-867F-62A4EA00F53F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550CBB2F-0F92-4446-867F-62A4EA00F53F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD776BC-0CCE-406C-BCC0-702CEA6A912F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD776BC-0CCE-406C-BCC0-702CEA6A912F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD776BC-0CCE-406C-BCC0-702CEA6A912F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD776BC-0CCE-406C-BCC0-702CEA6A912F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
