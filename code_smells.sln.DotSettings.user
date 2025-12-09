@@ -20,6 +20,7 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fe65e8a6_002D5235_002D4110_002Da6ba_002Dbdadfdbbc876/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BasketCalculatorTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::00A597B5-41AC-4AF8-BAD0-C68AE20FB01C::net6.0::PrimitiveObsession.Test.BasketCalculatorTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D0A795D6-EC91-48EA-99F3-D6957566FD90::net6.0::SwitchStatements.Test.SorterTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

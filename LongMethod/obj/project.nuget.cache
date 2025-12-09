@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "l/jDZcw33MRpOaTlb0LXwitor7HseGKR4fZJW6wD70D9olPutCQXk2b6pK04KpdGBrWwXNYKecY7EG2P+VNU5w==",
+  "dgSpecHash": "Y6gK4CDdtUM=",
   "success": true,
   "projectFilePath": "C:\\Users\\jason\\Documents\\courses\\prototypes\\refactoring\\code\\code_smells\\LongMethod\\LongMethod.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
   "logs": []
 }
